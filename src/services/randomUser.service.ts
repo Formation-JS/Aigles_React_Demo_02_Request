@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { GenderNat, GenderUser, User } from '../@types/user';
+import { UserNat, UserGender, User } from '../@types/user';
 import { RandomUserResult } from '../@types/request';
 
 // https://randomuser.me/api/?nat=gb&gender=male
 // nat -> AU, BR, CA, CH, DE, DK, ES, FI, FR, GB, IE, IN, IR, MX, NL, NO, NZ, RS, TR, UA, US
 
-export const getRandomUser = async (nat: GenderNat, gender?: GenderUser): Promise<User> => {
+export const getRandomUser = async (nat: UserNat, gender?: UserGender): Promise<User> => {
 
   const { data } = await axios.get<RandomUserResult>('https://randomuser.me/api', {
     params: { gender, nat }
