@@ -2,3 +2,4 @@
 
 ## Librairie
 - Axios
+- SWR
